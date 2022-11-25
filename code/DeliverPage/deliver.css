@@ -1,0 +1,90 @@
+header{
+    text-align: center;
+}
+h1{
+    font-size: 32px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.img-container{
+    border: 5px black solid;
+    display: flex;
+    border-radius: 50px;
+    width: 350px;
+    height: 350px;
+    margin-left: 50px;
+}
+
+img{
+    margin: auto;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.inform-container{
+    margin-left: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#store_name{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 41.5px;
+}
+
+.inform{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.button-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 35px;
+}      
+button{
+    margin: 65px;
+    display: block;
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    width: 250px;
+    height: 65px;
+    border: 2px solid black;
+    transition: 0.5s;
+    text-align: center;
+    border-radius: 50px 50px 0 50px;
+    margin-right: 65px;
+    margin-left: 65px;
+}
+
+
+button:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+#bu1{
+    color : white;
+    background-color: rgba(23, 206, 96);
+    border : 2px solid white
+}
+
+button::before{
+    content:'';
+    position : absolute;
+    bottom : 7px;
+    right: 7px;
+    width: 0px;
+    height: 0px;
+    border-style : solid;
+    border-color : rgba(0 0 0 /0) rgba(0 0 0 /0) rgba(6 165 67) rgba(0 0 0/0);
+    border-width: 0 0 14px 14px;
+}
