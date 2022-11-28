@@ -7,4 +7,7 @@ page.raise_for_status()
 
 soup = BeautifulSoup(page.text, "lxml")  #BeautifulSoup 객체 만들기
 
+Menu = []
 
+stname = soup.find("div", attrs = {"class":"restaurants-info"})  #여기서부터 싹다 수정하기...
+print("stname: {}".format(stname.div.get_text()))
