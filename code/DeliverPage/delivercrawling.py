@@ -63,3 +63,18 @@ print(Info.find_element("class name", "restaurant-content").find_element("tag na
 print(Dliever.find_element("class name", "cart").find_element("class name", "clearfix").find_element("tag name", "span").text)  #배달비
 print(Info.find_element("class name", "restaurant-content").find_element("tag name", "ul").find_element("tag name", "span").text)  #평점
 
+
+# 과정 알고리즘
+'''
+1. 요기요 창 이동
+2. 검색창을 찾아 클릭 후 적혀있는 현재 주소 지운 뒤 원하는 주소 입력 후 엔터
+3. 연관검색어 중 같은 내용의 선택지 클릭
+4. 등록 음식점 란에 있는 모든 가게들 요소 추출하기
+5. 반복문을 통해 현재 영업하지않는 가게들을 걸러 메뉴리스트에 가게이미지링크 넣기
+6. 랜덤함수를 통해 가게이미지 링크 하나 랜덤 추출
+7. 모든 가게들이 가지고 있는 요소중 랜덤으로 나온 가게이미지요소를 가지고있는 가게 추출
+8. 추출한 것 클릭
+9. 가게정보들이 묶여있는 요소를 가르키는 변수와 배달비를 포함하고있는 요소를 가르키는 변수 설정
+10. 가게 정보들이 묶여있는 요소를 가르키는 변수사용하여 가게이름, 최소 주문금액, 평점 글씨 출력
+11. 배달비를 포함하고있는 요소를 가르키는 변수를 사용하여 배달비 출력
+'''
