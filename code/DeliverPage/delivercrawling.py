@@ -1,13 +1,10 @@
-import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-import re  #정규 표현식 불러오기
 import random
 from tqdm import tqdm
 from collections import defaultdict
-import json
 import pandas as pd
 
 
