@@ -82,7 +82,7 @@ def get_deliver():
 url = "https://dapi.kakao.com//v2/local/search/keyword.json"  
 
 #api 요청자 정보 KakaoAk 뒤에 본인의 카카오 Reset Api 키 입력
-headers = {"Authorization": "KakaoAK c7a4e6db1555f26986592a607e2e1a8a"}
+headers = {"Authorization": "KakaoAK enter your kakao api key"}
 
 #전체 정보를 담아옵니다. 
 total = []
