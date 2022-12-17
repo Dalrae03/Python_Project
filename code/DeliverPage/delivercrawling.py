@@ -38,31 +38,36 @@ for li in List:
 # print(Menu)
 
 ch = random.choice(Menu)  #안의 사진주소들 모두 문자열 취급 / 사진리스트 중 하나 랜덤뽑기
+
+photo_url = ch[23:-45]  #사진 링크 필요부분만 잘라내기
+print(photo_url)
+
 # print(ch)
 
 for li in List:  #뽑은 사진과 동일한 요소를 가지고있는 가게 정보상자 찾기
   if(li.find_element("tag name", "td").find_element("tag name", "div").get_attribute("style") == ch): 
     Site = li.find_element("tag name", "div")
+    break
 
   else:
     pass
 
 Site.click()  #정보 상자 클릭하기
-time.sleep(3)
+time.sleep(1)
 
 
 # 가게이름 최소주문금액 배달비 평점 <- 뽑아야할 것
 # 랜덤으로 고른 가게의 이름과 동일한 요소의 정보들을 뽑아야함
 
-Info = browser.find_element("class name", "col-sm-8").find_element("class name", "restaurant-info")
-Dliever = browser.find_element("tag name", "ng-include").find_element("tag name", "div")
+Dliver_Date = []
 
-print(Info.find_element("class name", "restaurant-title").find_element("tag name", "span").text)  #가게이름 
-print(Info.find_element("class name", "restaurant-content").find_element("tag name", "ul").find_element("xpath", '//*[@id="content"]/div[2]/div[1]/div[1]/div[2]/ul/li[3]/span').text)
-#최소 주문금액
-print(Dliever.find_element("class name", "cart").find_element("class name", "clearfix").find_element("tag name", "span").text)  #배달비
-print(Info.find_element("class name", "restaurant-content").find_element("tag name", "ul").find_element("tag name", "span").text)  #평점
+Dliver_Date.append(browser.find_element("xpath", '//*[@id="content"]/div[2]/div[1]/div[1]/div[1]/span').text)  #가게이름 
+Dliver_Date.append(browser.find_element("xpath", '//*[@id="content"]/div[2]/div[1]/div[1]/div[2]/ul/li[3]/span').text)  #최소 주문금액
+Dliver_Date.append(browser.find_element("xpath", '//*[@id="content"]/div[2]/div[2]/ng-include/div/div[2]/div[4]/span[1]').text)  #배달비
+Dliver_Date.append(browser.find_element("xpath", '//*[@id="content"]/div[2]/div[1]/div[1]/div[2]/ul/li[1]/span').text)  #평점
 
+
+print(Dliver_Date)
 
 # 과정 알고리즘
 '''
